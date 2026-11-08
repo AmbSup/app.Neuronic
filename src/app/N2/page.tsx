@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Vectorscope } from "./_components/Vectorscope";
 import n2 from "./n2.module.css";
@@ -53,6 +54,12 @@ const reel = [
   { src: "/videos/n2/freedom.mp4", poster: "/videos/n2/freedom-poster.jpg", label: "Markenfilm" },
   { src: "/videos/n2/sunrise.mp4", poster: "/videos/n2/sunrise-poster.jpg", label: "Imagefilm" },
   { src: "/videos/n2/vintage.mp4", poster: "/videos/n2/vintage-poster.jpg", label: "Bildgestaltung" },
+];
+
+const clients = [
+  { name: "BMW", src: "/images/n2/clients/bmw.png" },
+  { name: "DHL Consulting", src: "/images/n2/clients/dhl-consulting.webp" },
+  { name: "Siemens Advanta Consulting", src: "/images/n2/clients/siemens-advanta-consulting.webp" },
 ];
 
 const faqs = [
@@ -175,11 +182,16 @@ export default function N2HomePage() {
             Platz für <span className={styles.accent}>eure Marke.</span>
           </h2>
           <p className={styles.clientsNote}>
-            Hier stehen bald die Logos unserer Kunden. Noch sind es Platzhalter — keine erfundenen
-            Namen.
+            Drei bestätigte Kunden. Zwei weitere Plätze folgen, sobald freigegeben — keine
+            erfundenen Namen.
           </p>
           <div className={styles.clientsGrid}>
-            {Array.from({ length: 5 }).map((_, i) => (
+            {clients.map((c) => (
+              <div className={styles.clientsLogo} key={c.name}>
+                <Image src={c.src} alt={c.name} width={160} height={64} />
+              </div>
+            ))}
+            {Array.from({ length: 2 }).map((_, i) => (
               <div className={styles.clientsSlot} aria-hidden="true" key={i} />
             ))}
           </div>
