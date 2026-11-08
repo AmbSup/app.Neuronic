@@ -1,0 +1,104 @@
+/*
+ * Scoped design-token root for the N2 micro-site. Everything here is scoped
+ * under .root (CSS Modules hashes the class), so none of it leaks onto the
+ * rest of the Neuronic app — no bare :root/body/h1/a selectors.
+ */
+.root {
+  color-scheme: dark;
+
+  /* ground */
+  --n2-bg: #0a0d0b;
+  --n2-panel: #10140f;
+  --n2-panel-raised: #141a13;
+  --n2-graticule: #263228;
+  --n2-graticule-bright: #3a4a3c;
+
+  /* ink */
+  --n2-fg: #e7ece6;
+  --n2-fg-muted: #7f9186;
+  --n2-fg-faint: #4e5c51;
+
+  /* signal */
+  --n2-phosphor: #39ff6a;
+  --n2-phosphor-dim: #1f7a3e;
+  --n2-phosphor-wash: rgba(57, 255, 106, 0.08);
+  --n2-amber: #ffb020;
+  --n2-amber-dim: #8a5c12;
+
+  /* type */
+  --n2-font-display: "Oswald", "Arial Narrow", sans-serif;
+  --n2-font-body: "Inter", system-ui, sans-serif;
+  --n2-font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --n2-measure: 68ch;
+  --n2-gutter: clamp(1.25rem, 4vw, 3rem);
+
+  --n2-ease-settle: cubic-bezier(0.16, 1, 0.3, 1);
+
+  background: var(--n2-bg);
+  color: var(--n2-fg);
+  font-family: var(--n2-font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+.root *,
+.root *::before,
+.root *::after {
+  box-sizing: border-box;
+}
+
+.root h1,
+.root h2,
+.root h3 {
+  font-family: var(--n2-font-display);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  text-wrap: balance;
+  margin: 0;
+}
+
+.root p {
+  margin: 0;
+  color: var(--n2-fg-muted);
+  text-wrap: pretty;
+}
+
+.root a {
+  color: inherit;
+}
+
+.root img,
+.root svg {
+  display: block;
+  max-width: 100%;
+}
+
+.root ::selection {
+  background: var(--n2-phosphor-dim);
+  color: #04120a;
+}
+
+.root :focus-visible {
+  outline: 2px solid var(--n2-amber);
+  outline-offset: 3px;
+}
+
+.root .monoFigure {
+  font-family: var(--n2-font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .root *,
+  .root *::before,
+  .root *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

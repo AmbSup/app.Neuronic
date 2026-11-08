@@ -1,0 +1,97 @@
+.scope {
+  position: relative;
+  width: 100%;
+  max-width: 30rem;
+  margin-inline: auto;
+}
+
+.scope svg {
+  width: 100%;
+  height: auto;
+}
+
+.rings,
+.crosshair,
+.ticks {
+  opacity: 0.9;
+}
+
+.trace {
+  stroke-dasharray: 1100;
+  stroke-dashoffset: 1100;
+  animation: draw-in 2.4s var(--n2-ease-settle) 0.2s forwards,
+    breathe 5s ease-in-out 2.8s infinite;
+}
+
+.lockDot {
+  opacity: 0;
+  animation: appear 0.4s ease-out 2.4s forwards, pulse 2.2s ease-in-out 2.9s infinite;
+}
+
+@keyframes draw-in {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes breathe {
+  0%,
+  100% {
+    stroke-width: 2.25;
+    opacity: 1;
+  }
+  50% {
+    stroke-width: 2.6;
+    opacity: 0.88;
+  }
+}
+
+@keyframes appear {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+    r: 3.5;
+  }
+  50% {
+    opacity: 0.55;
+    r: 5;
+  }
+}
+
+.readout {
+  position: absolute;
+  bottom: 6%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.75rem;
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  color: var(--n2-fg-faint);
+}
+
+.monoFigure {
+  font-family: var(--n2-font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.readoutArmed {
+  color: var(--n2-phosphor-dim);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .trace {
+    stroke-dashoffset: 0;
+    animation: none;
+  }
+  .lockDot {
+    opacity: 1;
+    animation: none;
+  }
+}

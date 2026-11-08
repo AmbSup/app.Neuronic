@@ -1,0 +1,55 @@
+.legal {
+  padding-block: clamp(3.5rem, 8vw, 6rem) clamp(4rem, 9vw, 7rem);
+}
+
+.inner {
+  max-width: 48rem;
+  margin-inline: auto;
+  padding-inline: var(--n2-gutter);
+}
+
+.legal h1 {
+  font-size: clamp(1.9rem, 4vw, 2.6rem);
+}
+
+.placeholder {
+  margin-top: 1.5rem;
+  padding: 1rem 1.25rem;
+  border: 1px dashed var(--n2-graticule-bright);
+  border-radius: 3px;
+  font-size: 0.88rem;
+  color: var(--n2-fg-muted);
+}
+
+.inner p + p {
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.inner a {
+  color: var(--n2-phosphor);
+  text-decoration: none;
+}
+
+.dl {
+  margin-top: 2rem;
+}
+
+.dl dt {
+  font-family: var(--n2-font-display);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--n2-fg-faint);
+  margin-top: 1.25rem;
+}
+
+.dl dd {
+  margin: 0.3rem 0 0;
+  font-size: 0.95rem;
+}
+
+.dl dd a {
+  color: var(--n2-phosphor);
+  text-decoration: none;
+}

@@ -1,0 +1,126 @@
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: rgba(10, 13, 11, 0.86);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--n2-graticule);
+}
+
+.inner {
+  max-width: 84rem;
+  margin-inline: auto;
+  padding: 1rem var(--n2-gutter);
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.mark {
+  font-family: var(--n2-font-display);
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--n2-fg);
+  text-decoration: none;
+  flex: 0 0 auto;
+}
+
+.mark::after {
+  content: "";
+  display: inline-block;
+  width: 0.4em;
+  height: 0.4em;
+  margin-left: 0.35em;
+  border-radius: 50%;
+  background: var(--n2-phosphor);
+  box-shadow: 0 0 6px var(--n2-phosphor);
+  vertical-align: middle;
+}
+
+.links {
+  display: flex;
+  gap: 1.75rem;
+  flex: 1;
+}
+
+.links a {
+  font-family: var(--n2-font-display);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--n2-fg-muted);
+  padding-block: 0.3rem;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.links a:hover,
+.links a[aria-current="page"] {
+  color: var(--n2-phosphor);
+  border-color: var(--n2-phosphor-dim);
+}
+
+.kontakt {
+  flex: 0 0 auto;
+  font-family: var(--n2-font-display);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--n2-bg);
+  background: var(--n2-amber);
+  padding: 0.55rem 1.1rem;
+  border-radius: 2px;
+  transition: filter 0.2s, transform 0.2s;
+}
+
+.kontakt:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+}
+
+.toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  width: 1.75rem;
+  background: none;
+  border: 0;
+  padding: 0.5rem 0;
+  cursor: pointer;
+}
+
+.toggle span {
+  display: block;
+  height: 2px;
+  background: var(--n2-phosphor);
+}
+
+.mobile {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem var(--n2-gutter) 1.25rem;
+  border-top: 1px solid var(--n2-graticule);
+}
+
+.mobile a {
+  font-family: var(--n2-font-display);
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--n2-fg-muted);
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--n2-graticule);
+}
+
+@media (max-width: 760px) {
+  .links {
+    display: none;
+  }
+  .toggle {
+    display: flex;
+  }
+}
