@@ -305,6 +305,44 @@
   }
 }
 
+/* example clip: single representative video per service */
+.example {
+  padding-block: clamp(3rem, 7vw, 5.5rem);
+}
+
+.exampleInner {
+  max-width: 84rem;
+  margin-inline: auto;
+  padding-inline: var(--n2-gutter);
+}
+
+.example h2 {
+  font-size: clamp(1.6rem, 3vw, 2.3rem);
+  max-width: 32rem;
+}
+
+.exampleNote {
+  margin-top: 0.9rem;
+  max-width: 34rem;
+  font-size: 0.88rem;
+}
+
+.exampleFrame {
+  margin-top: 2rem;
+  max-width: 48rem;
+  aspect-ratio: 16 / 9;
+  border-radius: 3px;
+  overflow: hidden;
+  border: 1px solid var(--n2-graticule-bright);
+}
+
+.exampleVideo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .ctaBand {
   padding-block: clamp(4rem, 9vw, 6.5rem);
   text-align: center;

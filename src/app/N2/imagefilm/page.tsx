@@ -54,6 +54,32 @@ export default function ImagefilmPage() {
         </div>
       </section>
 
+      <section className={styles.example}>
+        <div className={styles.exampleInner}>
+          <h2>
+            Ein Beispiel, <span className={styles.accent}>keine Behauptung.</span>
+          </h2>
+          <p className={styles.exampleNote}>
+            Lizenziertes Envato-Footage, so geschnitten, wie ein Imagefilm wirken soll.
+          </p>
+          <div className={styles.exampleFrame}>
+            <video
+              className={styles.exampleVideo}
+              src="/videos/n2/corporate.mp4"
+              poster="/videos/n2/corporate-poster.jpg"
+              controls
+              playsInline
+              muted
+              loop
+              preload="metadata"
+              aria-label="Beispiel Imagefilm"
+            >
+              Dein Browser unterstützt dieses Video-Format nicht.
+            </video>
+          </div>
+        </div>
+      </section>
+
       <section className={styles.body}>
         <div className={styles.bodyInner}>
           <h2>

@@ -52,6 +52,32 @@ export default function WerbevideoPage() {
         </div>
       </section>
 
+      <section className={styles.example}>
+        <div className={styles.exampleInner}>
+          <h2>
+            Ein Beispiel, <span className={styles.accent}>keine Behauptung.</span>
+          </h2>
+          <p className={styles.exampleNote}>
+            Lizenziertes Envato-Footage, geschnitten im Tempo eines Werbevideos.
+          </p>
+          <div className={styles.exampleFrame}>
+            <video
+              className={styles.exampleVideo}
+              src="/videos/n2/donuts.mp4"
+              poster="/videos/n2/donuts-poster.jpg"
+              controls
+              playsInline
+              muted
+              loop
+              preload="metadata"
+              aria-label="Beispiel Werbevideo"
+            >
+              Dein Browser unterstützt dieses Video-Format nicht.
+            </video>
+          </div>
+        </div>
+      </section>
+
       <section className={styles.formats}>
         <div className={styles.formatsInner}>
           <h2>

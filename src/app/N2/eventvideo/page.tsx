@@ -53,6 +53,32 @@ export default function EventvideoPage() {
         </div>
       </section>
 
+      <section className={styles.example}>
+        <div className={styles.exampleInner}>
+          <h2>
+            Ein Beispiel, <span className={styles.accent}>keine Behauptung.</span>
+          </h2>
+          <p className={styles.exampleNote}>
+            Lizenziertes Envato-Footage, so geschnitten, wie ein Aftermovie wirken soll.
+          </p>
+          <div className={styles.exampleFrame}>
+            <video
+              className={styles.exampleVideo}
+              src="/videos/n2/event1.mp4"
+              poster="/videos/n2/event1-poster.jpg"
+              controls
+              playsInline
+              muted
+              loop
+              preload="metadata"
+              aria-label="Beispiel Eventvideo"
+            >
+              Dein Browser unterstützt dieses Video-Format nicht.
+            </video>
+          </div>
+        </div>
+      </section>
+
       <section className={styles.coverage}>
         <div className={styles.coverageInner}>
           <h2>

@@ -46,6 +46,15 @@ const timeline = [
   { t: "T+04", title: "Lieferung", desc: "Exportiert für die Kanäle, auf denen das Video laufen soll." },
 ];
 
+const reel = [
+  { src: "/videos/n2/company.mp4", poster: "/videos/n2/company-poster.jpg", label: "Unternehmensfilm" },
+  { src: "/videos/n2/skyscrapers.mp4", poster: "/videos/n2/skyscrapers-poster.jpg", label: "Imagefilm" },
+  { src: "/videos/n2/crew.mp4", poster: "/videos/n2/crew-poster.jpg", label: "Hinter den Kulissen" },
+  { src: "/videos/n2/freedom.mp4", poster: "/videos/n2/freedom-poster.jpg", label: "Markenfilm" },
+  { src: "/videos/n2/sunrise.mp4", poster: "/videos/n2/sunrise-poster.jpg", label: "Imagefilm" },
+  { src: "/videos/n2/vintage.mp4", poster: "/videos/n2/vintage-poster.jpg", label: "Bildgestaltung" },
+];
+
 const faqs = [
   {
     q: "Woher kommt das Material in den Beispielvideos?",
@@ -138,16 +147,21 @@ export default function N2HomePage() {
             Kundenprojekte folgen hier, sobald freigegeben.
           </p>
           <div className={styles.reelGrid}>
-            {Array.from({ length: 6 }).map((_, i) => (
-              <div
-                className={styles.reelTile}
-                key={i}
-                style={{ ["--n2-hue" as string]: `${120 + i * 18}deg` }}
-              >
-                <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
-                  <circle cx="12" cy="12" r="11" fill="none" stroke="currentColor" strokeWidth="1.2" />
-                  <path d="M9.5 8.5 L16 12 L9.5 15.5 Z" fill="currentColor" />
-                </svg>
+            {reel.map((clip) => (
+              <div className={styles.reelTile} key={clip.src}>
+                <video
+                  className={styles.reelVideo}
+                  src={clip.src}
+                  poster={clip.poster}
+                  controls
+                  playsInline
+                  muted
+                  loop
+                  preload="metadata"
+                  aria-label={clip.label}
+                >
+                  Dein Browser unterstützt dieses Video-Format nicht.
+                </video>
               </div>
             ))}
           </div>
