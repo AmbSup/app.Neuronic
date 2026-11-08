@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     template: "%s — N2",
   },
   description:
-    "N2 produziert Imagefilm, Werbevideo und Eventvideo für Unternehmen in Österreich. Agil, planbar, fair kalkuliert.",
+    "N2 produziert verkaufsstarke Unternehmensvideos, die Vertrauen schaffen, Marken sichtbar machen und neue Kunden gewinnen – schnell, professionell und zum kalkulierbaren Fixpreis.",
 };
 
 export default function N2Layout({ children }: Readonly<{ children: React.ReactNode }>) {

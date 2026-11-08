@@ -7,7 +7,7 @@ import styles from "./page.module.css";
 export const metadata: Metadata = {
   title: { absolute: "N2 — Videoproduktion für Unternehmen" },
   description:
-    "N2 produziert Imagefilm, Werbevideo und Eventvideo für Unternehmen in Österreich. Agil, planbar, fair kalkuliert.",
+    "N2 produziert verkaufsstarke Unternehmensvideos, die Vertrauen schaffen, Marken sichtbar machen und neue Kunden gewinnen – schnell, professionell und zum kalkulierbaren Fixpreis.",
   alternates: { canonical: "https://app.neuronic-automation.ai/N2" },
 };
 
@@ -87,8 +87,9 @@ export default function N2HomePage() {
               Videoproduktion. <span className={styles.accent}>Schnell im Bild.</span>
             </h1>
             <p className={styles.heroSub}>
-              N2 produziert Imagefilm, Werbevideo und Eventvideo für Unternehmen in Österreich —
-              ohne Umwege, mit einem Preis, der vor dem Dreh feststeht.
+              N2 produziert verkaufsstarke Unternehmensvideos, die Vertrauen schaffen, Marken
+              sichtbar machen und neue Kunden gewinnen – schnell, professionell und zum
+              kalkulierbaren Fixpreis.
             </p>
             <a className={styles.cta} href="#kontakt">
               Projekt anfragen
